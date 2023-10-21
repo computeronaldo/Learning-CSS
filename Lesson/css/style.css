@@ -1,0 +1,53 @@
+/* universal selector used for CSS reset applies to everything */
+* {
+    font-family: monospace;
+    /* this is not inheritance it's just we are selecting all elements */
+    /* border: 3px solid black; */
+}
+
+/* element selector */
+body {
+    font-size: 22px;
+    /* not inherited */
+    /* border: 3px solid black; */
+}
+
+h1, h2 {
+    color: blue;
+}
+
+p {
+    color: purple;
+}
+
+p {
+    color: blue;
+}
+ 
+/* look for any span element inside a p element 
+
+Using a class over element selector makes more sense for this case 
+as where we want this highlighting might not necessarily be a span
+nested inside a paragraph.
+
+Using a class makes it more re-usable and flexible.
+
+p span {
+    text-transform: uppercase;
+    background-color: gold;
+} */
+
+.highlight {
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+/* class selector */
+.gray {
+    color: gray;
+}
+
+/* id selector */
+#second {
+    font-style: italic;
+}
