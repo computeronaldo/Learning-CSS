@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* setting height to 100vh is not a good idea because our content might outgrow that */
+    /* this gives our body element a height of atleast 100vh even though our content might not be whole page's height long */
+    min-height: 100vh;
+}
+
+/* Avoid setting font size as an absolute unit at all cost.
+Because if you do, you might overwrite user preferred settings
+for font size and remember you are making web app for a user
+html {
+    font-size: 16px;
+} */
+
+/* percentages are relative to parent element */
+header {
+    width: 75%;
+}
+
+h1 {
+    border: 2px dashed red;
+    width: 50%;
+    font-size: 3rem;
+    /* this is also 3rem */
+    padding: 1em;
+}
+
+/* padding and margin could be a good use case for em */
+
+/* this is not going to effect the fontsize of p */
+main {
+    font-size: 2rem;
+}
+
+/* rem is relative to root element's size which is set by browser */
+/* p {
+    font-size: 1.5rem;
+} */
+
+/* roughly speaking this is 0.5 * 2 * 16 = 16px */
+/* be careful with em's on font-size */
+p {
+    font-size: 0.5em;
+    width: 40ch;
+}
+
+/* It's a good practice to use rem's with font sizes */
+
+
+/* We can set the font size of a button using rem and use em to set padding and margin and that gives us a really good responsive button which shrinks and expands with our viewport */
+button {
+    border: none;
+    font-size: 4rem;
+    padding: 1em;
+    background-color: rgba(28, 55, 233, 0.832);
+}
