@@ -1,0 +1,27 @@
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+/* this order is really important for CSS to work as you expect */
+/* a -> a:visited -> a:hover -> a:active */
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: hsl(240, 100%, 50%);
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover, a:focus {
+    /* color: hsl(210, 100%, 50%); */
+    opacity: 0.6;
+}
+
+a:active {
+    color: red;
+}
