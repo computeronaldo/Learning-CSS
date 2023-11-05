@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  background-color: lightgray;
+}
+
+.opposite {
+  background-color: #333;
+  color: whitesmoke;
+  padding: 4rem;
+  margin-top: 100px;
+  /* "inline-block" is a hybrid between inline and block level element as it doesn't create
+    a new line like a block level element so this behavior is similar to an inline element,
+    it allows us to set padding, margin and height properties like we apply to a block level
+    element but doesn't work with an inline element.   */
+  display: inline-block;
+  height: 200px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0.5rem;
+  text-align: right;
+  background-color: #000;
+}
+
+li {
+  display: inline-block;
+  margin-inline: 0.5rem;
+}
+
+li > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+li > a:hover,
+li > a:focus {
+  text-decoration: underline;
+}
