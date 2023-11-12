@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+    min-height: 400px;
+    display: grid;
+    /* This is all about columns behavior in grid */
+    /* grid-auto-flow: column; */
+    /* grid-template-columns: 200px 100px 200px; */
+    /* grid-template-columns: 200px 1fr 1fr; */
+    /* grid-template-columns: 2fr 1fr 1fr; */
+    /* repeat(4, 1fr) is same as 1fr 1fr 1fr 1fr */
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(2, 1fr 2fr);
+    
+    /* This is all about rows behavior in grid */
+    /* grid-auto-rows: 200px; */ 
+    grid-auto-rows: minmax(150px, auto);
+
+    /* this can also be done so try this and reason about it*/
+    /* grid-auto-columns: minmax(150px, auto);
+    grid-template-rows: repeat(2, 1fr 2fr); */
+
+    /* these row or column gaps are also known as gutters */
+    /* row-gap: 1em;
+    column-gap: 1em; */
+    /* row gap followed by column gap */
+    gap: 1rem 0.5rem;
+}
+
+.box {
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
