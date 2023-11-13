@@ -9,33 +9,61 @@
 body {
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: 50px auto 50px;
+  grid-template-areas:
+    "hd hd hd hd hd hd hd hd hd"
+    "mn mn mn mn mn mn mn sb sb" "ft ft ft ft ft ft ft ft ft";
+  column-gap: 0.5rem;
+}
+
+.el {
+  background-color: rebeccapurple;
+  color: #fff;
+  display: grid;
+  place-content: center;
+}
+
+.header {
+  grid-area: hd;
+}
+
+.sidebar {
+  background-color: blue;
+  grid-area: sb;
+}
+
+.footer {
+  grid-area: ft;
 }
 
 .container {
-    min-height: 400px;
-    display: grid;
-    /* This is all about columns behavior in grid */
-    /* grid-auto-flow: column; */
-    /* grid-template-columns: 200px 100px 200px; */
-    /* grid-template-columns: 200px 1fr 1fr; */
-    /* grid-template-columns: 2fr 1fr 1fr; */
-    /* repeat(4, 1fr) is same as 1fr 1fr 1fr 1fr */
-    /* grid-template-columns: repeat(4, 1fr); */
-    grid-template-columns: repeat(2, 1fr 2fr);
-    
-    /* This is all about rows behavior in grid */
-    /* grid-auto-rows: 200px; */ 
-    grid-auto-rows: minmax(150px, auto);
+  grid-area: mn;
+  min-height: 400px;
+  display: grid;
+  /* This is all about columns behavior in grid */
+  /* grid-auto-flow: column; */
+  /* grid-template-columns: 200px 100px 200px; */
+  /* grid-template-columns: 200px 1fr 1fr; */
+  /* grid-template-columns: 2fr 1fr 1fr; */
+  /* repeat(4, 1fr) is same as 1fr 1fr 1fr 1fr */
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat(2, 1fr 2fr);
 
-    /* this can also be done so try this and reason about it*/
-    /* grid-auto-columns: minmax(150px, auto);
+  /* This is all about rows behavior in grid */
+  /* grid-auto-rows: 200px; */
+  grid-auto-rows: minmax(150px, auto);
+
+  /* this can also be done so try this and reason about it*/
+  /* grid-auto-columns: minmax(150px, auto);
     grid-template-rows: repeat(2, 1fr 2fr); */
 
-    /* these row or column gaps are also known as gutters */
-    /* row-gap: 1em;
+  /* these row or column gaps are also known as gutters */
+  /* row-gap: 1em;
     column-gap: 1em; */
-    /* row gap followed by column gap */
-    gap: 1rem 0.5rem;
+  /* row gap followed by column gap */
+  gap: 1rem 0.5rem;
 }
 
 .box {
@@ -43,4 +71,29 @@ body {
   color: #fff;
   font-size: 2rem;
   padding: 0.5rem;
+}
+
+/* grid item css properties */
+.box:first-child {
+  background-color: #00f;
+  /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+
+  /* another short-hand */
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+
+  display: grid;
+  /* align-content: center;
+    justify-content: center; */
+  /* another short-hand */
+  place-content: center center;
+}
+
+.box:nth-child(2) {
+  background-color: purple;
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
 }
