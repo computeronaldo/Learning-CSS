@@ -82,6 +82,11 @@ body {
     grid-row-end: 3; */
 
   /* another short-hand */
+  /* both of them represent same property with span we are saying span across 3 columns 
+  with 4 being the column-end and span to the left of column-end (same of row)
+  grid-column: span 3 / 4;
+  grid-row: span 2 / 3; */
+  
   grid-column: 1 / 4;
   grid-row: 1 / 3;
 
